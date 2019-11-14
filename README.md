@@ -20,8 +20,11 @@
     
 6. If installation for psycopg2 failed, paste this fix:
 
+   `delete requirement.txt from pipfile`
+
    `pipenv run pip install psycopg2-binary`
-   `pipenv install --skip-lock `
+   
+   `pipenv lock --pre `
     
 7. Open a new terminal and launch posgres server 
 
