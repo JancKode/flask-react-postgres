@@ -2,7 +2,7 @@
 
 # How to run the app
 
-1. Make sure Pyhon and nodejs are installed in your system
+1. Make sure Pyhon, posgressql and nodejs are installed in your system
 
 2. Install pipenv 
    
@@ -16,15 +16,27 @@
   
 5. Install flask and python dependencies
 
-    `pip install -r requirements.txt`
+    `pipenv install requirements.txt`
+    
+6. Open a new terminal and launch posgres server 
+
+   `systemctl start posgresql-12`
+   
+7. Change dabase URI in __init__.py
+
+   `postgresql://<dbusername>:<password>@localhost/<database name>`
   
-6. Launch flask app
+7. Launch flask app
 
      `export FLASK_APP=__init__`
    
      `export FLASK_DEBUG=1`
    
      `flask run`
+     
+8. Check the server 
+
+   `http://127.0.0.1:5000/`
    
 7. Open a new terminal and change directory to frontend
 
