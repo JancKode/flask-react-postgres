@@ -18,15 +18,20 @@
 
     `pipenv install requirements.txt`
     
-6. Open a new terminal and launch posgres server 
+6. If installation for psycopg2 failed, paste this fix:
 
-   `systemctl start posgresql-12`
+   `pipenv run pip install psycopg2-binary`
+   `pipenv install --skip-lock `
+    
+7. Open a new terminal and launch posgres server 
+
+   `systemctl start postgresql-12`
    
-7. Change dabase URI in __init__.py
+8. Change dabase URI in __init__.py
 
    `postgresql://<dbusername>:<password>@localhost/<database name>`
   
-7. Launch flask app
+9. Launch flask app
 
      `export FLASK_APP=__init__`
    
@@ -34,16 +39,16 @@
    
      `flask run`
      
-8. Check the server 
+10. Check the server 
 
    `http://127.0.0.1:5000/`
    
-7. Open a new terminal and change directory to frontend
+11. Open a new terminal and change directory to frontend
 
-8. Install React dependencies
+12. Install React dependencies
 
      `npm install`
    
-9. Run React app
+13. Run React app
 
      `npm start`
